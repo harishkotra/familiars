@@ -4,6 +4,13 @@ A self-contained, single-page **AI pet simulator** with a bright, fun, flat-colo
 
 > **Style note:** the theme is deliberately *flat*. Cards use hard `2px` borders and offset solid shadows, buttons are solid color, and there are **zero CSS gradients anywhere** — just chunky solid colors, sticker cards, and playful accents.
 
+<img width="3262" height="11254" alt="Familiars _ Adopt Your Fictional AI Pet" src="https://github.com/user-attachments/assets/1bb44248-2790-4a03-9b85-fee7fe32ca90" />
+<img width="1621" height="1188" alt="Screenshot at Aug 22 11-25-13" src="https://github.com/user-attachments/assets/a81959a4-68d5-4921-b26a-ae1bbcea6b6e" />
+<img width="1622" height="1188" alt="Screenshot at Aug 22 11-25-00" src="https://github.com/user-attachments/assets/577cd3e3-8b71-4dbf-ac2e-5e9a227f2497" />
+<img width="1624" height="1195" alt="Screenshot at Aug 22 11-24-49" src="https://github.com/user-attachments/assets/40f2798f-4a93-4789-b34a-9c68ee21f8b1" />
+<img width="1627" height="1193" alt="Screenshot at Aug 22 11-24-36" src="https://github.com/user-attachments/assets/3f7a5ed9-c469-445e-a51d-5286721ec450" />
+<img width="1627" height="1190" alt="Screenshot at Aug 22 11-24-06" src="https://github.com/user-attachments/assets/da1968c5-ec72-400c-8a08-fbee12e4348b" />
+
 ---
 
 ## Table of contents
