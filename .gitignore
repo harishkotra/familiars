@@ -1,0 +1,51 @@
+# ---------- Dependencies ----------
+# This project has NO runtime npm dependencies by design, but keep these in
+# case anyone adds any (or for local tooling / test runners).
+node_modules/
+.pwcache/
+.pwtmp/
+.npm/
+package-lock.json
+
+# ---------- Local / test artifacts ----------
+# Headless-browser test scaffolds and screenshots created during development.
+*.screenshot.png
+screenshot-*.png
+playwright-report/
+test-results/
+
+# ---------- Build / output (if ever added) ----------
+dist/
+build/
+out/
+
+# ---------- OS / editor cruft ----------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# ---------- Logs ----------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ---------- Environment / secrets ----------
+# If you add any API keys via env files, never commit them.
+.env
+.env.*
+!.env.example
+
+# ---------- Git / tooling ----------
+.nyc_output/
+coverage/
+
+# ---------- Promotional content (kept local, not committed) ----------
+x-thread.md
+blog.md
+linkedin.md

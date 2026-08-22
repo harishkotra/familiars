@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Familiars — Adopt Your Fictional AI Pet</title>
+  <meta name="description" content="Adopt a one-of-a-kind fictional AI pet. Care for it, feed it, play with it — and watch it become yours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito:wght@400;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background glow orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <div class="orb orb-6"></div>
+    <div class="orb orb-7"></div>
+    <div class="orb orb-8"></div>
+    <div class="orb orb-9"></div>
+    <div class="orb orb-10"></div>
+    <div class="orb orb-11"></div>
+    <div class="orb orb-12"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">🐾</span>
+        <span class="brand-name">Famili<b>ars</b></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#catalog">Adopt</a>
+        <a href="#how">How it works</a>
+        <a href="#sanctuary" class="nav-sanctuary">My Sanctuary <span class="sanctuary-count" id="sanctuaryCount">0</span></a>
+        <a href="#feed">Activity</a>
+        <button class="nav-ai" id="navAi" type="button" title="AI chat settings">
+          <span class="ai-dot" id="aiDot"></span> AI
+        </button>
+        <button class="nav-pixel" id="navPixel" type="button" title="Toggle Brain Freeze pixel mode" aria-pressed="false">
+          🧊 Pixel
+        </button>
+      </nav>
+      <button class="nav-trigger" id="navTrigger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">✦ A shelter for the artificially adorable</p>
+          <h1>Find your perfect <span class="grad">AI companion</span></h1>
+          <p class="hero-sub">
+            Every PixelPal is a digital creature with its own personality, quirks, and backstory.
+            Adopt one, name it, and care for it right here in your sanctuary.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">Browse the shelter <span>→</span></a>
+            <a href="#sanctuary" class="btn btn-ghost">🐾 My Sanctuary</a>
+          </div>
+          <ul class="hero-stats">
+            <li><b id="statTotal">0</b><span>pals waiting</span></li>
+            <li><b>100%</b><span>data-safe adoption</span></li>
+            <li><b>∞</b><span>love storage</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="pet-stage">
+            <div class="halo"></div>
+            <div class="pet-token pet-token-big" data-pet="glitch">🤖</div>
+            <div class="orbit orbit-a"><span class="pet-token">🦊</span></div>
+            <div class="orbit orbit-b"><span class="pet-token">🫧</span></div>
+            <div class="orbit orbit-c"><span class="pet-token">🐙</span></div>
+            <div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="catalog section" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The shelter</p>
+          <h2>Meet the pals</h2>
+          <p>Tap a pal to see its full profile and start the adoption process.</p>
+        </div>
+        <div class="filter-bar">
+          <div class="filter-chips" id="filterChips" role="tablist" aria-label="Filter by rarity or type">
+            <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+          </div>
+        </div>
+        <div class="grid catalog-grid" id="catalogGrid" aria-live="polite"></div>
+        <p class="empty-state" id="catalogEmpty" hidden>No pals match that filter… yet. 🫥</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>From shelter to family</h2>
+        </div>
+        <div class="how-grid">
+          <article class="how-card">
+            <div class="how-num">1</div>
+            <div class="how-icon">🔎</div>
+            <h3>Browse the shelter</h3>
+            <p>Flip through fictional creatures of every rarity, type, and temperament until one calls to you.</p>
+          </article>
+          <article class="how-card">
+            <div class="how-num">2</div>
+            <div class="how-icon">📝</div>
+            <h3>Adopt & name</h3>
+            <p>Fill out a quick adoption form, give your pal a name, and add your own as their adopter.</p>
+          </article>
+          <article class="how-card">
+            <div class="how-num">3</div>
+            <div class="how-icon">💛</div>
+            <h3>Care for them</h3>
+            <p>Feed, play with, and pet them in your sanctuary. Their mood and happiness are up to you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sanctuary -->
+    <section class="sanctuary section" id="sanctuary">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Your home</p>
+          <h2>My Sanctuary</h2>
+          <p id="sanctuaryTagline">Your adopted pals live here. Care for them and they'll love you back.</p>
+        </div>
+        <div class="sanctuary-summary" id="sanctuarySummary" hidden>
+          <span class="sum-chip"><b id="sumCount">0</b> pals</span>
+          <span class="sum-chip">✨ <b id="sumHappy">0</b> mood</span>
+          <span class="sum-chip">💛 <b id="sumLove">0</b> love</span>
+          <span class="sum-chip">🧠 <b id="sumMems">0</b> memories</span>
+          <span class="sum-hint">Open any pal to chat, feed, play, or pet them.</span>
+        </div>
+        <div class="sanctuary-grid" id="sanctuaryGrid" aria-live="polite"></div>
+        <div class="sanctuary-empty" id="sanctuaryEmpty">
+          <div class="empty-art">🏡</div>
+          <h3>Your sanctuary is empty</h3>
+          <p>Adopt your first PixelPal and it'll cozy up right here.</p>
+          <a href="#catalog" class="btn btn-primary">Go adopt one →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activity feed -->
+    <section class="feed section" id="feed">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">While you were away</p>
+          <h2>What your pals got up to</h2>
+          <p>Your pets don't just wait around — they explore, snooze, plot, and miss you. Here's the latest.</p>
+        </div>
+        <div class="feed-grid" id="feedGrid" aria-live="polite"></div>
+        <p class="feed-empty" id="feedEmpty">No adventures yet. Adopt a pal and step away — they'll start living on their own.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><span class="brand-mark">🐾</span> Familiars — a fictional shelter for fictional AI pets.</p>
+        <p class="foot-note">All creatures are imaginary. No actual pets were trained, cuddled, or starved in making this site. Data lives only in your browser.</p>
+        <p class="foot-credit">
+          Built by <a href="https://harishkotra.me" target="_blank" rel="noopener">Harish Kotra</a> ·
+          <a href="https://dailybuild.xyz" target="_blank" rel="noopener">Check out my other builds</a>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Promo popup for just-adopted pets -->
+  <div class="modal-backdrop" id="promoBackdrop" hidden>
+    <div class="modal promo" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="promo-art" id="promoArt">🐾</div>
+      <h3 id="promoTitle">Welcome home!</h3>
+      <p id="promoText"></p>
+      <div class="modal-actions">
+        <button class="btn btn-primary" data-close>See my sanctuary →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adoption modal -->
+  <div class="modal-backdrop" id="adoptModal" hidden>
+    <div class="modal adopt-modal" role="dialog" aria-modal="true" aria-labelledby="adoptTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="adopt-head">
+        <div class="adopt-portrait" id="adoptPortrait">🐾</div>
+        <div>
+          <h3 id="adoptTitle">Adopt this pal</h3>
+          <p id="adoptSpecies" class="adopt-species"></p>
+        </div>
+      </div>
+      <form id="adoptForm">
+        <label for="petName">Your pal's new name</label>
+        <input id="petName" name="petName" type="text" maxlength="20" placeholder="e.g. Nova" required />
+        <label for="adopterName">Your name (the adopter)</label>
+        <input id="adopterName" name="adopterName" type="text" maxlength="24" placeholder="e.g. Sam" required />
+        <label for="adoptNote">A note for your pal (optional)</label>
+        <textarea id="adoptNote" name="adoptNote" rows="3" maxlength="140" placeholder="Why did you pick them?"></textarea>
+        <button type="submit" class="btn btn-primary btn-block">Adopt & welcome home 💛</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- AI settings modal -->
+  <div class="modal-backdrop" id="aiModal" hidden>
+    <div class="modal ai-modal" role="dialog" aria-modal="true" aria-labelledby="aiTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="ai-head">
+        <div class="ai-bolt">🤖</div>
+        <div>
+          <h3 id="aiTitle">AI chat settings</h3>
+          <p class="adopt-species">Connect any OpenAI-compatible endpoint</p>
+        </div>
+      </div>
+      <p class="ai-intro">Point your pals at any OpenAI-compatible chat API. When enabled, the pets chat through a real LLM (which stays in character and remembers). Otherwise they fall back to the built-in local engine.</p>
+      <form id="aiForm">
+        <label class="switch-row">
+          <span><b>Enable AI chat</b><small>Use the LLM for pet conversations</small></span>
+          <input type="checkbox" id="aiEnabled" />
+          <span class="switch"></span>
+        </label>
+
+        <label for="aiBase">Base URL <span class="hint">(OpenAI-compatible)</span></label>
+        <input id="aiBase" type="text" spellcheck="false" placeholder="https://api.openai.com/v1" />
+
+        <label for="aiKey">API key <span class="hint">(optional for local servers)</span></label>
+        <input id="aiKey" type="password" spellcheck="false" autocomplete="off" placeholder="sk-…  (stored locally)" />
+
+        <label for="aiModel">Model</label>
+        <input id="aiModel" type="text" spellcheck="false" placeholder="gpt-4o-mini, llama3.1, qwen2.5…" />
+
+        <div class="ai-grid2">
+          <div>
+            <label for="aiTemp">Temperature <b id="aiTempOut">0.9</b></label>
+            <input id="aiTemp" type="range" min="0" max="1.5" step="0.1" value="0.9" />
+          </div>
+          <div>
+            <label for="aiTokens">Max tokens <b id="aiTokensOut">200</b></label>
+            <input id="aiTokens" type="range" min="50" max="600" step="25" value="200" />
+          </div>
+        </div>
+
+        <div class="ai-presets">
+          <span class="preset-label">Presets:</span>
+          <button type="button" class="preset" data-preset="openai">OpenAI</button>
+          <button type="button" class="preset" data-preset="ollama">Ollama</button>
+          <button type="button" class="preset" data-preset="lmstudio">LM Studio</button>
+          <button type="button" class="preset" data-preset="groq">Groq</button>
+          <button type="button" class="preset" data-preset="openrouter">OpenRouter</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Save settings</button>
+        <p class="ai-note" id="aiStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Chat modal -->
+  <div class="modal-backdrop" id="chatModal" hidden>
+    <div class="modal chat-modal" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="chat-head">
+        <div class="chat-avatar" id="chatAvatar">🐾</div>
+        <div class="chat-id">
+          <h3 id="chatTitle">Chat</h3>
+          <p id="chatSub" class="adopt-species"></p>
+        </div>
+        <div class="chat-rel" id="chatRel">🤍 Stranger</div>
+        <span class="chat-engine-badge" id="chatEngineBadge" title="Chat engine">local</span>
+      </div>
+      <div class="chat-log" id="chatLog" aria-live="polite"></div>
+      <div class="chat-quick" id="chatQuick" aria-label="Suggested messages">
+        <button class="qchip" data-q="Are you happy?">😊 How are you?</button>
+        <button class="qchip" data-q="Wanna play?">🎾 Play</button>
+        <button class="qchip" data-q="Do you remember me?">🧠 Remember</button>
+        <button class="qchip" data-q="I love you">💛 I love you</button>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" type="text" maxlength="200" placeholder="Say something to your pal…" autocomplete="off" />
+        <button type="submit" class="btn btn-primary chat-send" aria-label="Send">➤</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="personas.js"></script>
+  <script src="engine.js"></script>
+  <script src="llm.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
